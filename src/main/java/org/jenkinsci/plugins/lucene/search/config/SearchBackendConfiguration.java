@@ -46,6 +46,10 @@ public class SearchBackendConfiguration extends GlobalConfiguration {
     load();
   }
 
+  public File getLucenePath() {
+    return lucenePath;
+  }
+
   public void setLucenePath(final File lucenePath) {
     Jenkins.get().getACL().checkPermission(Jenkins.ADMINISTER);
     this.lucenePath = lucenePath;
